@@ -3,6 +3,7 @@ import './App.css'
 import Card from './components/card/Card';
 import notFound from "./assets/images/notFound.png";
 import logotipo from "./assets/images/logotipo.png"
+import rick from "./assets/images/rick.webp"
 import api from './services/api';
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
           onChange={handleSearch}
         />
         <div className='logotipoDiv'>
-
+          <img className='rick' src={rick}></img>
         </div>
       </div>
       <div className='cards'>
