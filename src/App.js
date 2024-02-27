@@ -5,21 +5,44 @@ import api from './services/api';
 
 function App() {
 
+  const [fullData, setFullData] = useState([]);
   const [data, setData] = useState([]);
-  const person = 16;
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    api.get()
-      .then(res => setData(res.data.results))
+    try {
+      const response = api.get()
+        .then(res => {
+          setData(res.data.results)
+          setFullData(res.data.results)
+        })
+    } catch (error) {
+      console.error('Erro ao buscar dados:', error);
+    }
   }, [])
 
+  const handleSearch = (event) => {
+    const term = event.target.value;
+    setSearchTerm(term);
+    if (term === "") {
+      setData(fullData)
+    } else {
+      const filterData = data.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      setData(filterData);
+    }
+  }
 
   return (
     <div className='home'>
       <div className='head'>
+        <input
+          type="text"
+          placeholder="Pesquisar..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
       </div>
       <div className='cards'>
-        {console.log(data)}
         {data.map((item, index) => {
           return (
             <Card key={index}
