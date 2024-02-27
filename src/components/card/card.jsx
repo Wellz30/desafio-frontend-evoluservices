@@ -50,9 +50,9 @@ const Card = (props) => {
                     </div>
                 </div>
                 <div className="info">
-                    <div className="plumbusDiv">
+                    <div className="portalDiv">
                         <div>
-                            <img className="plumbus" onClick={() => playSound()} src={portal}></img>
+                            <img className="portal" onClick={() => playSound()} src={portal}></img>
                         </div>
                     </div>
                 </div>
