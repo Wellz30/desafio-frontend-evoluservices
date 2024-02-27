@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
-import Card from './components/card/card';
+import Card from './components/card/Card';
 import api from './services/api';
 
 function App() {
@@ -16,19 +16,24 @@ function App() {
 
   return (
     <div className='home'>
-      {console.log(data)}
-      {data.map((item, index) => {
-        return (
-          <Card key={index}
-            pic={item.image}
-            name={item.name}
-            status={item.status}
-            location={item.location.name}
-          >
-          </Card>
-        )
-      })}
+      <div className='head'>
+      </div>
+      <div className='cards'>
+        {console.log(data)}
+        {data.map((item, index) => {
+          return (
+            <Card key={index}
+              pic={item.image}
+              name={item.name}
+              status={item.status}
+              location={item.location.name}
+            >
+            </Card>
+          )
+        })}
+      </div>
     </div>
+
   );
 }
 

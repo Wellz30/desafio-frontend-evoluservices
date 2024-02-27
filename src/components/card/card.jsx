@@ -3,7 +3,7 @@ import alive from "../../assets/icons/alive.svg"
 import dead from "../../assets/icons/dead.svg"
 import portal from "../../assets/images/portal.png"
 import portalSound from "../../assets/sounds/portal.mp3"
-import './card.css'
+import './Card.css'
 
 const Card = (props) => {
     const playSound = () => {
