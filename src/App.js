@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
 import Card from './components/card/Card';
-import notFound from "./assets/images/notFound.gif";
+import notFound from "./assets/images/notFound.png";
 import api from './services/api';
 
 function App() {
@@ -32,7 +32,6 @@ function App() {
       const filterData = data.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
       setData(filterData);
     }
-    console.log(data)
   }
 
   return (
@@ -61,7 +60,6 @@ function App() {
           <div className='notFound'>
             <div><img src={notFound}></img></div>
             Not Found...
-            {console.log("Entou aqui")}
           </div>
 
         }
