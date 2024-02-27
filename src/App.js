@@ -5,6 +5,7 @@ import api from './services/api';
 function App() {
 
   const [data, setData] = useState([]);
+  const person = 16;
 
   useEffect(() => {
     api.get()
@@ -14,10 +15,12 @@ function App() {
 
   return (
     <>
+    {console.log(data)}
     <Card 
-      pic={data[0].image}
-      name={data[0].name}
-      status={data[0].status}
+      pic={data[person].image}
+      name={data[person].name}
+      status={data[person].status}
+      location={data[person].location.name}
     >
     </Card>
     {/* {data.map((item, index) => {

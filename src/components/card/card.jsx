@@ -1,9 +1,15 @@
 import React from "react";
-import alive from "../../assets/alive.svg"
-import dead from "../../assets/dead.svg"
+import alive from "../../assets/icons/alive.svg"
+import dead from "../../assets/icons/dead.svg"
+import portal from "../../assets/images/portal.png"
+import portalSound from "../../assets/sounds/portal.mp3"
 import './card.css'
 
 const Card = (props) => {
+    const playSound = () => {
+        const audio = new Audio(portalSound);
+        audio.play();
+    }
     return (
         <div className="card">
             <div className="pic">
@@ -19,16 +25,37 @@ const Card = (props) => {
                         {props.name}
                     </div>
                     <div className="status">
-                        {props.status === "Alive" ? 
-                        <>
-                            <img className="statusImg" src={alive}></img>
-                            {props.status}
-                        </> :
-                        <img src={dead}></img>}                        
+                        {props.status === "Alive" ?
+                            <>
+                                <img className="statusImg" src={alive}></img>
+                                {props.status}
+                            </> :
+                            <>
+                                <img className="statusImg" src={dead}></img>
+                                {props.status}
+                            </>
+                        }                     
                     </div>
                 </div>
-                <div className="info"></div>
-                <div className="info"></div>
+                <div className="info">
+                    <div className="locationInfo">
+                        <div>
+                            Last know location:
+                        </div>
+                    </div>
+                    <div className="location">
+                        <div>
+                            {props.location}
+                        </div>
+                    </div>
+                </div>
+                <div className="info">
+                    <div className="plumbusDiv">
+                        <div>
+                            <img className="plumbus" onClick={() => playSound()} src={portal}></img>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
