@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
 import Card from './components/card/Card';
+import notFound from "./assets/images/notFound.gif";
 import api from './services/api';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       const filterData = data.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
       setData(filterData);
     }
+    console.log(data)
   }
 
   return (
@@ -44,17 +46,25 @@ function App() {
         />
       </div>
       <div className='cards'>
-        {data.map((item, index) => {
-          return (
-            <Card key={index}
-              pic={item.image}
-              name={item.name}
-              status={item.status}
-              location={item.location.name}
-            >
-            </Card>
-          )
-        })}
+        {data.length ?
+          data.map((item, index) => {
+            return (
+              <Card key={index}
+                pic={item.image}
+                name={item.name}
+                status={item.status}
+                location={item.location.name}
+              >
+              </Card>
+            )
+          }) :
+          <div className='notFound'>
+            <div><img src={notFound}></img></div>
+            Not Found...
+            {console.log("Entou aqui")}
+          </div>
+
+        }
       </div>
     </div>
 
