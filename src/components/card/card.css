@@ -12,9 +12,10 @@
     cursor: pointer;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 650px) {
     .card{
         min-width: 250px;
+        max-width: 400px;
     }
 }
 

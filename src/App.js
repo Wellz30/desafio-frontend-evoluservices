@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css'
 import Card from './components/card/Card';
 import notFound from "./assets/images/notFound.png";
+import logotipo from "./assets/images/logotipo.png"
 import api from './services/api';
 
 function App() {
@@ -37,12 +38,18 @@ function App() {
   return (
     <div className='home'>
       <div className='head'>
+        <div className='logotipoDiv'>
+          <img className='logotipo' src={logotipo}></img>
+        </div>
         <input className='input'
           type="text"
           placeholder="Pesquisar..."
           value={searchTerm}
           onChange={handleSearch}
         />
+        <div className='logotipoDiv'>
+
+        </div>
       </div>
       <div className='cards'>
         {data.length ?

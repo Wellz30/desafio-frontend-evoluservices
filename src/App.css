@@ -6,11 +6,17 @@
 
 .head{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 20%;
+}
+
+@media (max-width: 650px) {
+    .head{
+        flex-direction: column;
+    }
 }
 
 .input{
@@ -19,6 +25,19 @@
     border: 4px solid green;
     border-radius: 10px;
     text-align: center;
+}
+
+.logotipoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+.logotipo{
+    width: 100%;
+    height: 100%;
 }
 
 .cards{
