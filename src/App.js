@@ -44,7 +44,7 @@ function App() {
         </div>
         <input className='input'
           type="text"
-          placeholder="Pesquisar..."
+          placeholder="Search character..."
           value={searchTerm}
           onChange={handleSearch}
         />
