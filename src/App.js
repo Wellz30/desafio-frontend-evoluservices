@@ -37,7 +37,7 @@ function App() {
   return (
     <div className='home'>
       <div className='head'>
-        <input
+        <input className='input'
           type="text"
           placeholder="Pesquisar..."
           value={searchTerm}
@@ -58,7 +58,7 @@ function App() {
             )
           }) :
           <div className='notFound'>
-            <div><img src={notFound}></img></div>
+            <div className='notFoundDiv'><img className='notFoundImage' src={notFound}></img></div>
             Not Found...
           </div>
 

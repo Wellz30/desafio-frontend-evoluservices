@@ -5,11 +5,20 @@
 }
 
 .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 20%;
-    background-repeat: no-repeat;
+}
 
-    background-position: center;
+.input{
+    width: 50%;
+    height: 30%;
+    border: 4px solid green;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .cards{
@@ -26,7 +35,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 70%;
+    height: 50%;
     font-size: 1.5rem;
     color: white;
+}
+
+.notFoundDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.notFoundImage{
+    width: 50%;
 }
