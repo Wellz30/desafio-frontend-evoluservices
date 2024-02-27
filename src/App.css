@@ -1,0 +1,7 @@
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+}

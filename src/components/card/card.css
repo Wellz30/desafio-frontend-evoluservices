@@ -1,14 +1,21 @@
 .card{
     display: flex;
     flex-direction: row;
-    min-width: 150px;
+    min-width: 600px;
     max-width: 600px;
     height: 250px;
-    border: 1px solid black;
+    margin: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(43, 42, 42);
     border-radius: 10px;
-    background-color: red;
     overflow: hidden;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card{
+        min-width: 250px;
+    }
 }
 
 .pic{
@@ -22,13 +29,13 @@
     justify-content: space-around;
     width: 70%;
     height: 100%;
-    background-color: rgb(63, 61, 61);
     padding: 0px 0px 0px 20px;
 }
 
 .img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .info{
@@ -42,17 +49,17 @@
 }
 
 .name{
+    text-align: start;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 1.4rem;
     font-weight: 1000;
     color: white;
     overflow: hidden;
-    background-color: aqua;
 }
 
 .status{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 700;
     color: white;
 }
@@ -67,7 +74,7 @@
     justify-content: center;
     height: 50%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 700;
     color: rgb(124, 123, 123);
 }
@@ -78,8 +85,9 @@
     justify-content: center;
     height: 50%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 500;
+    text-align: start;
     color: white;
 }
 

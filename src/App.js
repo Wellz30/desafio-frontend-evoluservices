@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css'
 import Card from './components/card/card';
 import api from './services/api';
 
@@ -14,26 +15,20 @@ function App() {
 
 
   return (
-    <>
-    {/* <Card 
-      pic={data[person].image}
-      name={data[person].name}
-      status={data[person].status}
-      location={data[person].location.name}
-    >
-    </Card> */}
-    {data.map((item, index) => {
-      return (
-        <Card
-        pic={item.image}
-        name={item.name}
-        status={item.status}
-        location={item.location.name}
-        >
-        </Card>
-      )
-    })}
-    </>
+    <div className='home'>
+      {console.log(data)}
+      {data.map((item, index) => {
+        return (
+          <Card key={index}
+            pic={item.image}
+            name={item.name}
+            status={item.status}
+            location={item.location.name}
+          >
+          </Card>
+        )
+      })}
+    </div>
   );
 }
 
