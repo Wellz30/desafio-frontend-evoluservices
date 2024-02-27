@@ -46,6 +46,8 @@
     font-size: 30px;
     font-weight: 1000;
     color: white;
+    overflow: hidden;
+    background-color: aqua;
 }
 
 .status{

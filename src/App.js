@@ -15,17 +15,24 @@ function App() {
 
   return (
     <>
-    {console.log(data)}
-    <Card 
+    {/* <Card 
       pic={data[person].image}
       name={data[person].name}
       status={data[person].status}
       location={data[person].location.name}
     >
-    </Card>
-    {/* {data.map((item, index) => {
-      return (<h1>{item.name}</h1>)
-    })} */}
+    </Card> */}
+    {data.map((item, index) => {
+      return (
+        <Card
+        pic={item.image}
+        name={item.name}
+        status={item.status}
+        location={item.location.name}
+        >
+        </Card>
+      )
+    })}
     </>
   );
 }
