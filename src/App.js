@@ -23,6 +23,7 @@ function App() {
 
   const handleSearch = (event) => {
     const term = event.target.value;
+    setData(fullData);
     setSearchTerm(term);
     if (term === "") {
       setData(fullData)
