@@ -90,6 +90,12 @@ function App() {
         isOpen={isOpen}
         closeModal={closeModal}
         image={character.image}
+        gender={character.gender}
+        status={character.status}
+        species={character.species}
+        origin={character.origin.name}
+        location={character.location.name}
+        type={character.type}
       >
       </Modal>
     </div>

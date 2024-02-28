@@ -28,14 +28,14 @@ function Modal(props) {
               </div>
               <div className='infoData'>
                 <div className='infoDataDiv'>
-                  <p>Gender:</p>
-                  <p>Status:</p>
-                  <p>Species:</p>
+                  <p>Gender: {props.gender || "Unknown"}</p>
+                  <p>Status: {props.status || "Unknown"}</p>
+                  <p>Species: {props.species || "Unknown"}</p>
                 </div>
                 <div className='infoDataDiv'>
-                  <p>Origin:</p>
-                  <p>Location:</p>
-                  <p>Type:</p>
+                  <p>Origin: {props.origin || "Unknown"}</p>
+                  <p>Location: {props.location || "Unknown"}</p>
+                  <p>Type: {props.type || "Unknown"}</p>
                 </div>
               </div>
             </div>
