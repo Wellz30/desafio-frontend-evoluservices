@@ -18,7 +18,7 @@ function Modal(props) {
               <div className='picModal'>
                 <img className='picModalDiv' src={props.image}></img>
               </div>
-              <div className=''>
+              <div className='nameModal'>
                 {props.name || "Unknown"}
               </div>
             </div>
@@ -28,14 +28,14 @@ function Modal(props) {
               </div>
               <div className='infoData'>
                 <div className='infoDataDiv'>
-                  <p>Gender: {props.gender || "Unknown"}</p>
-                  <p>Status: {props.status || "Unknown"}</p>
-                  <p>Species: {props.species || "Unknown"}</p>
+                  <p>Gender: <b>{props.gender || "Unknown"}</b></p>
+                  <p>Status: <b>{props.status || "Unknown"}</b></p>
+                  <p>Species: <b>{props.species || "Unknown"}</b></p>
                 </div>
                 <div className='infoDataDiv'>
-                  <p>Origin: {props.origin || "Unknown"}</p>
-                  <p>Location: {props.location || "Unknown"}</p>
-                  <p>Type: {props.type || "Unknown"}</p>
+                  <p>Origin: <b>{props.origin || "Unknown"}</b></p>
+                  <p>Location: <b>{props.location || "Unknown"}</b></p>
+                  <p>Type: <b>{props.type || "Unknown"}</b></p>
                 </div>
               </div>
             </div>

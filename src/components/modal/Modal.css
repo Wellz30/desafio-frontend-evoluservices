@@ -18,7 +18,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 6px 6px 6px 6px rgba(40, 99, 0, 1);
-  color: rgba(40, 99, 0)
+  color: rgba(40, 99, 0);
 }
 
 .picDiv {
@@ -48,6 +48,13 @@
   height: 100%;
 }
 
+.nameModal{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  color: white;
+}
+
 @media (max-width: 650px) {
   .picModal {
     width: 70%;
@@ -57,7 +64,9 @@
   .modal-content {
     width: 70%;
     box-shadow: 3px 3px 3px 3px rgba(40, 99, 0, 1);
+    overflow: scroll;
   }
+  
   .infoData{
     flex-direction: column;
   }
@@ -99,6 +108,14 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+p{
+  color: orange;
+}
+
+b{
+  color: white;
 }
 
 .close-button {

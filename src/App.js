@@ -90,6 +90,7 @@ function App() {
         isOpen={isOpen}
         closeModal={closeModal}
         image={character.image}
+        name={character.name}
         gender={character.gender}
         status={character.status}
         species={character.species}
