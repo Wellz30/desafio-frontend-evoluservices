@@ -39,6 +39,9 @@ function Modal(props) {
                 </div>
               </div>
             </div>
+            <div className='closeButtonDiv'>
+                <div className='closeButton' onClick={props.closeModal}>Close</div>
+              </div>
           </div>
         </div>
       )}
