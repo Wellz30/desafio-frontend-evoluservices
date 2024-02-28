@@ -55,6 +55,9 @@ const Card = (props) => {
                         <div>
                             <img className="portal" onClick={() => {playSound()}} src={portal}></img>
                         </div>
+                        <div className="details">
+                            More details...
+                        </div>
                     </div>
                 </div>
             </div>
