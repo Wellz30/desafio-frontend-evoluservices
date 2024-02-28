@@ -15,6 +15,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [character, setCharacter] = useState([]);
   console.log(character);
+  console.log(data);
 
   useEffect(() => {
     try {
@@ -22,6 +23,7 @@ function App() {
         .then(res => {
           setData(res.data.results)
           setFullData(res.data.results)
+          setCharacter(res.data.results[0])
         })
     } catch (error) {
       console.error('Erro ao buscar dados:', error);
@@ -89,14 +91,14 @@ function App() {
       <Modal
         isOpen={isOpen}
         closeModal={closeModal}
-        image={character.image}
-        name={character.name}
-        gender={character.gender}
-        status={character.status}
-        species={character.species}
-        origin={character.origin.name}
-        location={character.location.name}
-        type={character.type}
+        image={character.image || ""}
+        name={character.name || ""}
+        gender={character.gender || ""}
+        status={character.status || ""}
+        species={character.species || ""}
+        origin={character.origin ? character.origin.name : ""}
+        location={character.location ? character.location.name : ""}
+        type={character.type || ""}
       >
       </Modal>
     </div>
