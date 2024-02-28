@@ -3,10 +3,16 @@ import './Modal.css'; // Importe seu arquivo CSS para estilização
 
 function Modal(props) {
 
+  const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
+      props.closeModal();
+    }
+  };
+
   return (
     <div>
       {props.isOpen && (
-        <div className="modal-overlay">
+        <div className="modal-overlay" onClick={handleOverlayClick}>
           <div className="modal-content">
             <span className="close-button">X</span>
             <h2>Modal Title</h2>

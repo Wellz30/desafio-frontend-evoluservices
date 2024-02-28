@@ -80,7 +80,6 @@ function App() {
             <div className='notFoundDiv'><img className='notFoundImage' src={notFound}></img></div>
             Not Found...
           </div>
-
         }
       </div>
       <Modal
