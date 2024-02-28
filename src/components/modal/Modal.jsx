@@ -19,8 +19,6 @@ function Modal(props) {
                 <img className='picModalDiv' src={props.image}></img>
               </div>
             </div>
-            <h2>Modal Title</h2>
-            <p>Modal Content Goes Here</p>
             <button onClick={props.closeModal}>Close modal</button>
           </div>
         </div>

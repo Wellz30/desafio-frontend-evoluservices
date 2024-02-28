@@ -14,6 +14,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [character, setCharacter] = useState([]);
+  console.log(character);
 
   useEffect(() => {
     try {
