@@ -18,8 +18,27 @@ function Modal(props) {
               <div className='picModal'>
                 <img className='picModalDiv' src={props.image}></img>
               </div>
+              <div className=''>
+                {props.name || "Unknown"}
+              </div>
             </div>
-            <button onClick={props.closeModal}>Close modal</button>
+            <div className='infosModal'>
+              <div className="infoDetails">
+                Details:
+              </div>
+              <div className='infoData'>
+                <div className='infoDataDiv'>
+                  <p>Gender:</p>
+                  <p>Status:</p>
+                  <p>Species:</p>
+                </div>
+                <div className='infoDataDiv'>
+                  <p>Origin:</p>
+                  <p>Location:</p>
+                  <p>Type:</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
