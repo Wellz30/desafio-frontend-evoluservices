@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
 import Card from './components/card/Card';
+import Modal from './components/modal/Modal';
 import notFound from "./assets/images/notFound.png";
 import logotipo from "./assets/images/logotipo.png"
 import rick from "./assets/images/rick.webp"
@@ -11,6 +12,7 @@ function App() {
   const [fullData, setFullData] = useState([]);
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -35,6 +37,14 @@ function App() {
       setData(filterData);
     }
   }
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div className='home'>
@@ -61,6 +71,7 @@ function App() {
                 name={item.name}
                 status={item.status}
                 location={item.location.name}
+                openModal={openModal}
               >
               </Card>
             )
@@ -72,8 +83,12 @@ function App() {
 
         }
       </div>
+      <Modal
+        isOpen={isOpen}
+        closeModal={closeModal}
+      >
+      </Modal>
     </div>
-
   );
 }
 

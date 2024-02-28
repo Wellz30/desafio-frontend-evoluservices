@@ -9,6 +9,7 @@ const Card = (props) => {
     const playSound = () => {
         const audio = new Audio(portalSound);
         audio.play();
+        props.openModal();
     }
     return (
         <div className="card">
@@ -52,7 +53,7 @@ const Card = (props) => {
                 <div className="info">
                     <div className="portalDiv">
                         <div>
-                            <img className="portal" onClick={() => playSound()} src={portal}></img>
+                            <img className="portal" onClick={() => {playSound()}} src={portal}></img>
                         </div>
                     </div>
                 </div>
