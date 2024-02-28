@@ -14,7 +14,11 @@ function Modal(props) {
       {props.isOpen && (
         <div className="modal-overlay" onClick={handleOverlayClick}>
           <div className="modal-content">
-            <span className="close-button">X</span>
+            <div className='picDiv'>
+              <div className='picModal'>
+                <img src={props.image}></img>
+              </div>
+            </div>
             <h2>Modal Title</h2>
             <p>Modal Content Goes Here</p>
             <button onClick={props.closeModal}>Close modal</button>

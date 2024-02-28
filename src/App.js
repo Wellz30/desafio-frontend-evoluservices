@@ -13,6 +13,7 @@ function App() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [character, setCharacter] = useState([]);
 
   useEffect(() => {
     try {
@@ -38,7 +39,8 @@ function App() {
     }
   }
 
-  const openModal = () => {
+  const openModal = (objectCharacter) => {
+    setCharacter(objectCharacter);
     setIsOpen(true);
   };
 
@@ -72,6 +74,7 @@ function App() {
                 status={item.status}
                 location={item.location.name}
                 openModal={openModal}
+                objectCharacter={item}
               >
               </Card>
             )
@@ -85,6 +88,7 @@ function App() {
       <Modal
         isOpen={isOpen}
         closeModal={closeModal}
+        image={character.image}
       >
       </Modal>
     </div>

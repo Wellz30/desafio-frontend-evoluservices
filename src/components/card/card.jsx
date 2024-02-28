@@ -9,7 +9,7 @@ const Card = (props) => {
     const playSound = () => {
         const audio = new Audio(portalSound);
         audio.play();
-        props.openModal();
+        props.openModal(props.objectCharacter);
     }
     return (
         <div className="card">
@@ -22,7 +22,7 @@ const Card = (props) => {
             </div>
             <div className="infoDiv">
                 <div className="info">
-                    <div className="name">
+                    <div className="name" onClick={() => {playSound()}}>
                         {props.name}
                     </div>
                     <div className="status">
