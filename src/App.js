@@ -63,7 +63,7 @@ function App() {
           value={searchTerm}
           onChange={handleSearch}
         />
-        <div className='logotipoDiv'>
+        <div className='logotipoDivRick'>
           <img className='rick' src={rick}></img>
         </div>
       </div>
